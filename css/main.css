@@ -21,8 +21,9 @@
   --border-light: #EBE7E0;
   --shadow-soft: 0 2px 20px rgba(44,44,44,0.06);
   --shadow-hover: 0 8px 32px rgba(44,44,44,0.10);
-  --radius: 6px;
-  --radius-lg: 12px;
+  --radius: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
   --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   --font-heading: 'Noto Serif SC', 'Georgia', 'Times New Roman', serif;
   --font-body: 'Georgia', 'Noto Serif SC', serif;
@@ -129,7 +130,7 @@ p {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 120px 0;
 }
 
 .section-center {
@@ -139,19 +140,19 @@ p {
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 48px;
+  gap: 40px;
 }
 
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 36px;
+  gap: 28px;
 }
 
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
+  gap: 24px;
 }
 
 /* ===========================
@@ -161,17 +162,18 @@ p {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 14px 32px;
-  font-size: 0.92rem;
+  padding: 14px 36px;
+  font-size: 0.9rem;
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: 50px;
   cursor: pointer;
   transition: all var(--transition);
   border: 1.5px solid transparent;
   font-family: var(--font-body);
   white-space: nowrap;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 
 .btn-primary {
@@ -298,7 +300,7 @@ p {
   width: 40px;
   height: 40px;
   background: var(--green);
-  border-radius: 6px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -651,37 +653,27 @@ p {
 }
 
 /* ===========================
-   Hero 区域 — 极简大图风
+   Hero 区域 — Re.vert 全宽大图风
    =========================== */
 
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   background: var(--cream);
   position: relative;
   overflow: hidden;
   padding-top: var(--nav-height);
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -30%;
-  right: -10%;
-  width: 55%;
-  height: 130%;
-  background: var(--green);
-  opacity: 0.04;
-  border-radius: 0 0 0 50%;
-  pointer-events: none;
+  text-align: center;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 640px;
+  max-width: 720px;
   padding: 60px 0;
+  margin: 0 auto;
 }
 
 .hero-badge {
@@ -691,20 +683,20 @@ p {
   background: rgba(43,94,59,0.06);
   border: 1px solid rgba(43,94,59,0.1);
   color: var(--green);
-  padding: 7px 18px;
-  border-radius: 4px;
-  font-size: 0.8rem;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.82rem;
   font-weight: 500;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   font-family: var(--font-body);
 }
 
 .hero-title {
   color: var(--deep);
-  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
   font-weight: 700;
-  margin-bottom: 24px;
-  line-height: 1.2;
+  margin-bottom: 28px;
+  line-height: 1.15;
   letter-spacing: -0.02em;
 }
 
@@ -715,14 +707,15 @@ p {
 .hero-subtitle {
   color: var(--muted);
   font-size: 1.15rem;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   line-height: 1.7;
 }
 
 .hero-dividers {
   display: flex;
-  gap: 24px;
-  margin-bottom: 44px;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 48px;
   flex-wrap: wrap;
 }
 
@@ -731,7 +724,7 @@ p {
   align-items: center;
   gap: 8px;
   color: var(--deep-light);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-family: var(--font-heading);
 }
 
@@ -746,60 +739,49 @@ p {
 
 .hero-ctas {
   display: flex;
+  justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
 }
 
-/* Hero 装饰图区 */
-.hero-deco {
-  position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 42%;
-  max-width: 500px;
-  pointer-events: none;
-}
-
-.hero-deco-inner {
-  width: 100%;
-  aspect-ratio: 4/5;
-  background: url('../images/hero-deco.jpg') center / cover no-repeat;
-  border-radius: var(--radius-lg);
-  opacity: 0.9;
-  border: 1px solid var(--border-light);
-  box-shadow: 0 8px 40px rgba(43,94,59,0.08);
-}
-
 /* ===========================
-   信任数据条
+   信任数据条 — 白底圆角卡片
    =========================== */
 
 .trust-bar {
-  background: var(--cream-dark);
-  padding: 56px 0;
-  border-top: 1px solid var(--border-light);
-  border-bottom: 1px solid var(--border-light);
+  background: var(--white);
+  padding: 0;
+  margin-top: -40px;
+  position: relative;
+  z-index: 2;
 }
 
 .trust-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  gap: 20px;
+  padding: 0;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .trust-stat {
   text-align: center;
-  padding: 20px 16px;
-  border-right: 1px solid var(--border);
+  padding: 28px 20px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 16px rgba(44,44,44,0.04);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition);
 }
 
-.trust-stat:last-child {
-  border-right: none;
+.trust-stat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 24px rgba(44,44,44,0.08);
 }
 
 .trust-stat-num {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: var(--deep);
   line-height: 1;
@@ -808,13 +790,13 @@ p {
 }
 
 .trust-stat-num span {
-  color: var(--accent-yellow-hover);
+  color: var(--green);
 }
 
 .trust-stat-label {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--muted);
-  margin-top: 8px;
+  margin-top: 6px;
   font-weight: 400;
 }
 
@@ -998,6 +980,7 @@ p {
   font-size: 2.8rem;
   overflow: hidden;
   position: relative;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .case-card-img-placeholder {
@@ -1073,6 +1056,7 @@ p {
   overflow: hidden;
   background: var(--cream-dark);
   color: var(--muted);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .blog-card-body {
@@ -1127,9 +1111,9 @@ p {
 }
 
 .carousel-btn {
-  width: 42px;
-  height: 42px;
-  border-radius: 4px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   border: 1.5px solid var(--border);
   background: var(--white);
   color: var(--deep);
@@ -1139,6 +1123,7 @@ p {
   align-items: center;
   justify-content: center;
   transition: all var(--transition);
+  box-shadow: 0 2px 8px rgba(44,44,44,0.04);
 }
 
 .carousel-btn:hover {
@@ -1404,13 +1389,14 @@ textarea.form-control {
    =========================== */
 
 .highlight-box {
-  background: linear-gradient(135deg, rgba(43,94,59,0.06) 0%, rgba(43,94,59,0.03) 100%);
-  border: 1px solid rgba(43,94,59,0.08);
-  border-radius: var(--radius-lg);
-  padding: 64px 48px;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 72px 48px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 20px rgba(44,44,44,0.03);
 }
 
 .highlight-box h2 {
@@ -1560,9 +1546,9 @@ textarea.form-control {
    =========================== */
 
 .page-hero {
-  background: linear-gradient(135deg, rgba(43,94,59,0.06) 0%, rgba(43,94,59,0.03) 100%);
-  border-bottom: 1px solid rgba(43,94,59,0.06);
-  padding: calc(var(--nav-height) + 60px) 0 80px;
+  background: var(--cream);
+  border-bottom: 1px solid var(--border-light);
+  padding: calc(var(--nav-height) + 80px) 0 80px;
   color: var(--deep);
   position: relative;
   overflow: hidden;
@@ -1645,7 +1631,6 @@ textarea.form-control {
   .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
   .trust-stats { grid-template-columns: repeat(2, 1fr); }
-  .hero-deco { display: none; }
 }
 
 @media (max-width: 768px) {
@@ -1676,8 +1661,15 @@ textarea.form-control {
   .hero-ctas { flex-direction: column; }
   .hero-ctas .btn { width: 100%; justify-content: center; }
 
-  .trust-stats { grid-template-columns: repeat(2, 1fr); }
-  .trust-stat { border-right: none; border-bottom: 1px solid var(--border); }
+  .trust-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 0 24px;
+  }
+  .trust-stat {
+    border-bottom: none;
+    padding: 24px 16px;
+  }
 
   .compare-card { padding: 24px; }
   .steps-row { grid-template-columns: 1fr; }
@@ -1690,7 +1682,7 @@ textarea.form-control {
 @media (max-width: 480px) {
   .container { padding: 0 20px; }
   .grid-4 { grid-template-columns: 1fr; }
-  .trust-stats { grid-template-columns: 1fr 1fr; }
+  .trust-stats { grid-template-columns: 1fr 1fr; margin: 0 20px; }
   .footer-grid { grid-template-columns: 1fr; }
   .float-cta { right: 16px; bottom: 60px; }
   .filter-bar { gap: 6px; }
