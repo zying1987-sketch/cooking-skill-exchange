@@ -764,15 +764,11 @@ p {
 .hero-deco-inner {
   width: 100%;
   aspect-ratio: 4/5;
-  background: var(--cream-dark);
+  background: url('../images/hero-deco.jpg') center / cover no-repeat;
   border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  color: var(--muted);
-  opacity: 0.6;
+  opacity: 0.9;
   border: 1px solid var(--border-light);
+  box-shadow: 0 8px 40px rgba(43,94,59,0.08);
 }
 
 /* ===========================
