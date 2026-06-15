@@ -13,10 +13,20 @@
 
 <nav class="navbar" id="navbar">
   <div class="navbar-inner">
-    <a href="../index.html" class="navbar-logo"><div class="navbar-logo-icon">趣</div><div class="navbar-logo-text"><span class="navbar-logo-cn">煮趣</span><span class="navbar-logo-en">Cooking Skill Exchange</span></div></a>
+    <a href="../index.html" class="navbar-logo">
+      <img src="../assets/images/logo-black.jpg" alt="CSE" class="navbar-logo-img">
+      <div class="navbar-logo-text">
+        <span class="navbar-logo-cn">煮趣</span>
+        <span class="navbar-logo-en">Cooking Skill Exchange</span>
+      </div>
+    </a>
     <nav class="navbar-nav">
-      <a href="../index.html">首页</a><a href="services.html">服务</a><a href="cases.html">案例</a>
-      <a href="resources.html">资源·社区</a><a href="global.html">出海专页</a><a href="insights.html">洞见</a>
+      <a href="../index.html">首页</a>
+      <a href="services.html">服务</a>
+      <a href="cases.html">案例</a>
+      <a href="resources.html">资源·社区</a>
+      <a href="global.html" class="active">出海专页</a>
+      <a href="insights.html">洞见</a>
       <a href="contact.html">合作</a>
     </nav>
     <div class="navbar-actions">
@@ -31,17 +41,23 @@
 </nav>
 
 <div class="mobile-menu">
-  <a href="../index.html">首页</a><a href="services.html">服务</a><a href="cases.html">案例</a>
-  <a href="resources.html">资源·社区</a><a href="global.html">出海专页</a><a href="insights.html">洞见</a>
+  <a href="../index.html">首页</a>
+  <a href="services.html">服务</a>
+  <a href="cases.html">案例</a>
+  <a href="resources.html">资源·社区</a>
+  <a href="global.html">出海专页</a>
+  <a href="insights.html">洞见</a>
   <a href="contact.html">合作</a>
-  <div class="mobile-menu-actions"><a href="contact.html" class="btn btn-primary btn-sm">免费诊断</a></div>
+  <div class="mobile-menu-actions">
+    <a href="contact.html" class="btn btn-primary btn-sm">免费诊断</a>
+  </div>
 </div>
 
 <!-- Page Hero -->
 <section class="page-hero">
   <div class="container">
     <div class="page-hero-content">
-      <p class="section-label" style="color:#ffd166;">Global Expansion</p>
+      <p class="section-label">Global Expansion</p>
       <h1>打通健康品牌的全球市场</h1>
       <p class="desc">海外品牌进中国 · 中国品牌出海 · AI 辅助市场扫描与本地化</p>
     </div>
@@ -49,14 +65,14 @@
 </section>
 
 <!-- 两种模式对比 -->
-<section class="section">
+<section class="section" data-animate="fade-up">
   <div class="container">
-    <div class="section-center" style="margin-bottom:48px;">
+    <div class="section-center">
       <p class="section-label">两大服务模式</p>
       <h2 class="section-title">根据您的品牌起点，选择增长路径</h2>
     </div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:960px;margin:0 auto;">
+    <div class="compare-grid" data-animate="fade-up">
       <!-- 海外品牌入华 -->
       <div class="compare-card inbound">
         <div class="compare-card-badge">🌏 海外品牌 → 中国</div>
@@ -70,9 +86,9 @@
           <li>食品标签合规辅助</li>
           <li>线下体验活动策划</li>
         </ul>
-        <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border-light);">
-          <p style="font-size:0.82rem;color:var(--deep-light);"><strong style="color:var(--green);">收费方式：</strong>项目制 或 基础费+GMV分成</p>
-          <p style="font-size:0.82rem;color:var(--deep-light);margin-top:4px;"><strong style="color:var(--green);">典型案例：</strong>Woolworths、Omnipork、Oatly</p>
+        <div class="compare-payment">
+          <p><strong class="text-green">收费方式：</strong>项目制 或 基础费+GMV分成</p>
+          <p><strong class="text-green">典型案例：</strong>Woolworths、Omnipork、Oatly</p>
         </div>
       </div>
 
@@ -89,9 +105,9 @@
           <li>跨境物流与合规支持</li>
           <li>本地化内容翻译与文化适配</li>
         </ul>
-        <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border-light);">
-          <p style="font-size:0.82rem;color:var(--deep-light);"><strong style="color:var(--accent-yellow);">收费方式：</strong>项目制 或 基础费+GMV分成</p>
-          <p style="font-size:0.82rem;color:var(--deep-light);margin-top:4px;"><strong style="color:var(--accent-yellow);">核心优势：</strong>熟悉海外审美与合规要求</p>
+        <div class="compare-payment">
+          <p><strong class="text-yellow">收费方式：</strong>项目制 或 基础费+GMV分成</p>
+          <p><strong class="text-yellow">核心优势：</strong>熟悉海外审美与合规要求</p>
         </div>
       </div>
     </div>
@@ -99,40 +115,40 @@
 </section>
 
 <!-- 为什么选择煮趣 -->
-<section class="section" style="background:var(--cream-dark);">
+<section class="section section-alt" data-animate="fade-up">
   <div class="container">
-    <div class="section-center" style="margin-bottom:48px;">
+    <div class="section-center">
       <p class="section-label">我们的优势</p>
       <h2 class="section-title">为什么选择煮趣做跨境增长？</h2>
     </div>
-    <div class="grid-3" style="max-width:960px;margin:0 auto;">
-      <div style="background:white;border-radius:16px;padding:32px;border:1px solid var(--border-light);text-align:center;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div style="font-size:2.5rem;margin-bottom:16px;">🔄</div>
-        <h3 style="font-size:1.05rem;margin-bottom:10px;">国内KOL资源可复用</h3>
-        <p style="font-size:0.88rem;color:var(--deep-light);line-height:1.7;">10年积累的健康KOL/KOC资源网络，结合AI精准匹配，入华品牌可直接对接，无需从零建立</p>
+    <div class="global-advantage-grid" data-animate="fade-up">
+      <div class="global-advantage-card">
+        <div class="card-icon">🔄</div>
+        <h3>国内KOL资源可复用</h3>
+        <p>10年积累的健康KOL/KOC资源网络，结合AI精准匹配，入华品牌可直接对接，无需从零建立</p>
       </div>
-      <div style="background:white;border-radius:16px;padding:32px;border:1px solid var(--border-light);text-align:center;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div style="font-size:2.5rem;margin-bottom:16px;">💰</div>
-        <h3 style="font-size:1.05rem;margin-bottom:10px;">CPS分销体系搭建</h3>
-        <p style="font-size:0.88rem;color:var(--deep-light);line-height:1.7;">成熟的CPS联盟分销模式，按效果付费，降低品牌进入新市场的风险</p>
+      <div class="global-advantage-card">
+        <div class="card-icon">💰</div>
+        <h3>CPS分销体系搭建</h3>
+        <p>成熟的CPS联盟分销模式，按效果付费，降低品牌进入新市场的风险</p>
       </div>
-      <div style="background:white;border-radius:16px;padding:32px;border:1px solid var(--border-light);text-align:center;transition:all 0.3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
-        <div style="font-size:2.5rem;margin-bottom:16px;">🌍</div>
-        <h3 style="font-size:1.05rem;margin-bottom:10px;">服务国际品牌经验</h3>
-        <p style="font-size:0.88rem;color:var(--deep-light);line-height:1.7;">Woolworths、Oatly、Omnipork等国际品牌操盘经验，熟悉中外品牌差异</p>
+      <div class="global-advantage-card">
+        <div class="card-icon">🌍</div>
+        <h3>服务国际品牌经验</h3>
+        <p>Woolworths、Oatly、Omnipork等国际品牌操盘经验，熟悉中外品牌差异</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- 合作流程 -->
-<section class="section">
+<section class="section" data-animate="fade-up">
   <div class="container">
-    <div class="section-center" style="margin-bottom:48px;">
+    <div class="section-center">
       <p class="section-label">合作流程</p>
       <h2 class="section-title">4步开启跨境增长</h2>
     </div>
-    <div class="steps-row" style="max-width:900px;margin:0 auto;">
+    <div class="steps-row">
       <div class="step-item">
         <div class="step-num">1</div>
         <div class="step-title">免费诊断</div>
@@ -158,16 +174,16 @@
 </section>
 
 <!-- 案例展示 -->
-<section class="section" style="background:var(--cream-dark);">
+<section class="section section-alt" data-animate="fade-up">
   <div class="container">
-    <div class="section-center" style="margin-bottom:40px;">
+    <div class="section-center">
       <p class="section-label">相关案例</p>
       <h2 class="section-title">跨境增长实战</h2>
     </div>
-    <div class="grid-2" style="max-width:800px;margin:0 auto;gap:24px;">
+    <div class="grid-2 cases-grid-custom">
       <div class="case-card">
-        <div class="case-card-img" style="background:var(--cream-dark);;color:var(--green)">
-          <div class="case-card-img-placeholder" style="font-size:3.5rem;">🌾</div>
+        <div class="case-card-img case-img-green">
+          <div class="case-card-img-placeholder case-img-placeholder-lg">🌾</div>
         </div>
         <div class="case-card-body">
           <div class="case-card-tags">
@@ -180,8 +196,8 @@
         </div>
       </div>
       <div class="case-card">
-        <div class="case-card-img" style="background:var(--cream-dark);;color:var(--green)">
-          <div class="case-card-img-placeholder" style="font-size:3.5rem;">🍷</div>
+        <div class="case-card-img case-img-green">
+          <div class="case-card-img-placeholder case-img-placeholder-lg">🍷</div>
         </div>
         <div class="case-card-body">
           <div class="case-card-tags">
@@ -198,13 +214,13 @@
 </section>
 
 <!-- 底部CTA -->
-<section class="section">
+<section class="section" data-animate="fade-up">
   <div class="container">
-    <div class="highlight-box" style="max-width:760px;margin:0 auto;">
-      <p class="section-label" style="color:#ffd166;">跨境增长</p>
+    <div class="cases-cta">
+      <p class="section-label">跨境增长</p>
       <h2>预约跨境增长咨询</h2>
       <p>无论是想进入中国，还是想走向世界，我们都有对应的增长路径</p>
-      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <div class="cta-buttons">
         <a href="contact.html" class="btn btn-primary btn-lg">🗓️ 预约跨境咨询</a>
         <a href="#" class="btn btn-secondary btn-lg">📄 下载出海Checklist</a>
       </div>
@@ -216,15 +232,48 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo"><div class="footer-logo-icon">趣</div><div><div style="font-weight:700;font-size:1.1rem;color:white;">煮趣</div><div style="font-size:0.7rem;color:rgba(255,255,255,0.5);">Cooking Skill Exchange</div></div></div>
+        <div class="footer-logo">
+          <img src="../assets/images/logo-black.jpg" alt="CSE" class="footer-logo-img">
+          <div>
+            <div class="footer-logo-text-cn">煮趣</div>
+            <div class="footer-logo-text-en">Cooking Skill Exchange</div>
+          </div>
+        </div>
         <p class="footer-tagline">健康品牌的全球化增长伙伴<br>战略咨询 · AI营销增长 · GEO优化 · 出海分销</p>
-        <div class="footer-social"><a href="#">💬</a><a href="#">🐦</a><a href="#">📕</a><a href="#">💼</a><a href="#">📷</a></div>
+        <div class="footer-social">
+          <a href="#">💬</a>
+          <a href="#">🐦</a>
+          <a href="#">📕</a>
+          <a href="#">💼</a>
+        </div>
       </div>
-      <div class="footer-col"><h4>服务</h4><ul><li><a href="services.html">品牌战略咨询</a></li><li><a href="services.html">AI营销增长</a></li><li><a href="services.html">出海分销</a></li></ul></div>
-      <div class="footer-col"><h4>公司</h4><ul><li><a href="cases.html">成功案例</a></li><li><a href="resources.html">资源社区</a></li><li><a href="insights.html">洞见博客</a></li></ul></div>
-      <div class="footer-col"><h4>联系</h4><ul><li><a href="contact.html">预约咨询</a></li><li><a href="mailto:hello@cookingskill.com">hello@cookingskill.com</a></li></ul></div>
+      <div class="footer-col">
+        <h4>服务</h4>
+        <ul>
+          <li><a href="services.html">品牌战略咨询</a></li>
+          <li><a href="services.html">AI营销增长</a></li>
+          <li><a href="services.html">出海分销</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>公司</h4>
+        <ul>
+          <li><a href="cases.html">成功案例</a></li>
+          <li><a href="resources.html">资源社区</a></li>
+          <li><a href="insights.html">洞见博客</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>联系</h4>
+        <ul>
+          <li><a href="contact.html">预约咨询</a></li>
+          <li><a href="mailto:Junefwo@126.com">Junefwo@126.com</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-bottom"><p class="footer-copyright">© 2026 煮趣（Cooking Skill Exchange）. 沪ICP备XXXXXXXX号</p></div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2026 煮趣（Cooking Skill Exchange）. 沪ICP备XXXXXXXX号</p>
+    </div>
   </div>
 </footer>
 

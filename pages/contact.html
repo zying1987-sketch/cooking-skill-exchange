@@ -11,13 +11,24 @@
 </head>
 <body>
 
+<!-- 导航栏 -->
 <nav class="navbar" id="navbar">
   <div class="navbar-inner">
-    <a href="../index.html" class="navbar-logo"><div class="navbar-logo-icon">趣</div><div class="navbar-logo-text"><span class="navbar-logo-cn">煮趣</span><span class="navbar-logo-en">Cooking Skill Exchange</span></div></a>
+    <a href="../index.html" class="navbar-logo">
+      <img src="../assets/images/logo-black.jpg" alt="CSE" class="navbar-logo-img">
+      <div class="navbar-logo-text">
+        <span class="navbar-logo-cn">煮趣</span>
+        <span class="navbar-logo-en">Cooking Skill Exchange</span>
+      </div>
+    </a>
     <nav class="navbar-nav">
-      <a href="../index.html">首页</a><a href="services.html">服务</a><a href="cases.html">案例</a>
-      <a href="resources.html">资源·社区</a><a href="global.html">出海专页</a><a href="insights.html">洞见</a>
-      <a href="contact.html">合作</a>
+      <a href="../index.html">首页</a>
+      <a href="services.html">服务</a>
+      <a href="cases.html">案例</a>
+      <a href="resources.html">资源·社区</a>
+      <a href="global.html">出海专页</a>
+      <a href="insights.html">洞见</a>
+      <a href="contact.html" class="active">合作</a>
     </nav>
     <div class="navbar-actions">
       <div class="lang-switch">
@@ -31,17 +42,23 @@
 </nav>
 
 <div class="mobile-menu">
-  <a href="../index.html">首页</a><a href="services.html">服务</a><a href="cases.html">案例</a>
-  <a href="resources.html">资源·社区</a><a href="global.html">出海专页</a><a href="insights.html">洞见</a>
+  <a href="../index.html">首页</a>
+  <a href="services.html">服务</a>
+  <a href="cases.html">案例</a>
+  <a href="resources.html">资源·社区</a>
+  <a href="global.html">出海专页</a>
+  <a href="insights.html">洞见</a>
   <a href="contact.html">合作</a>
-  <div class="mobile-menu-actions"><a href="contact.html" class="btn btn-primary btn-sm">免费诊断</a></div>
+  <div class="mobile-menu-actions">
+    <a href="contact.html" class="btn btn-primary btn-sm">免费诊断</a>
+  </div>
 </div>
 
 <!-- Page Hero -->
-<section class="page-hero">
+<section class="page-hero" data-animate="fade-up">
   <div class="container">
     <div class="page-hero-content">
-      <p class="section-label" style="color:#ffd166;">Contact</p>
+      <p class="section-label">Contact</p>
       <h1>合作</h1>
       <p class="desc">分享您的品牌挑战，我们帮您找到增长路径</p>
     </div>
@@ -49,52 +66,52 @@
 </section>
 
 <!-- 合作流程时间线 -->
-<section style="padding:48px 0;background:var(--white);border-bottom:1px solid var(--border-light);">
+<section class="steps-section" data-animate="fade-up">
   <div class="container">
-    <p class="section-label" style="text-align:center;">合作流程</p>
-    <h2 style="text-align:center;font-size:1.6rem;margin-bottom:40px;">4步开启增长之旅</h2>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:960px;margin:0 auto;position:relative;" class="steps-row-4">
-      <div style="text-align:center;padding:0 16px;">
-        <div style="width:56px;height:56px;border-radius:50%;background:var(--green);color:white;font-size:1.3rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;box-shadow:0 4px 12px rgba(43,94,59,0.3);">1</div>
-        <h4 style="font-size:0.92rem;margin-bottom:6px;">填写表单<br>或预约咨询</h4>
-        <p style="font-size:0.78rem;color:var(--deep-light);">30秒快速提交需求</p>
-      </div>
-      <div style="text-align:center;padding:0 16px;">
-        <div style="width:56px;height:56px;border-radius:50%;background:var(--green);color:white;font-size:1.3rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;box-shadow:0 4px 12px rgba(43,94,59,0.3);">2</div>
-        <h4 style="font-size:0.92rem;margin-bottom:6px;">24小时内<br>获得回复</h4>
-        <p style="font-size:0.78rem;color:var(--deep-light);">确认需求，安排咨询时间</p>
-      </div>
-      <div style="text-align:center;padding:0 16px;">
-        <div style="width:56px;height:56px;border-radius:50%;background:var(--green);color:white;font-size:1.3rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;box-shadow:0 4px 12px rgba(43,94,59,0.3);">3</div>
-        <h4 style="font-size:0.92rem;margin-bottom:6px;">30分钟<br>免费诊断</h4>
-        <p style="font-size:0.78rem;color:var(--deep-light);">深入了解您的品牌与目标</p>
-      </div>
-      <div style="text-align:center;padding:0 16px;">
-        <div style="width:56px;height:56px;border-radius:50%;background:var(--accent-yellow);color:white;font-size:1.3rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;box-shadow:0 4px 12px rgba(230,126,34,0.3);">4</div>
-        <h4 style="font-size:0.92rem;margin-bottom:6px;">定制方案<br>与报价</h4>
-        <p style="font-size:0.78rem;color:var(--deep-light);">提供个性化增长方案</p>
-      </div>
+    <p class="section-label">合作流程</p>
+    <h2 class="section-title">4步开启增长之旅</h2>
+    <div class="steps-row-4">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <h4 class="step-title">填写表单<br>或预约咨询</h4>
+          <p class="step-desc">30秒快速提交需求</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <h4 class="step-title">24小时内<br>获得回复</h4>
+          <p class="step-desc">确认需求，安排咨询时间</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <h4 class="step-title">30分钟<br>免费诊断</h4>
+          <p class="step-desc">深入了解您的品牌与目标</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num step-num-accent">4</div>
+          <h4 class="step-title">定制方案<br>与报价</h4>
+          <p class="step-desc">提供个性化增长方案</p>
+        </div>
     </div>
   </div>
 </section>
 
 <!-- 联系表单 + 日历预约 -->
-<section class="section" id="form">
+<section class="section" id="form" data-animate="fade-up">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:1100px;margin:0 auto;">
+    <div class="contact-grid">
 
       <!-- 表单 -->
       <div>
         <p class="section-label">需求表单</p>
-        <h2 style="font-size:1.6rem;margin-bottom:8px;">告诉我们您的需求</h2>
-        <p style="font-size:0.9rem;color:var(--deep-light);margin-bottom:32px;">我们会根据您的信息，安排最合适的人员在24小时内回复</p>
+        <h2 class="form-section-title">告诉我们您的需求</h2>
+        <p class="form-section-desc">我们会根据您的信息，安排最合适的人员在24小时内回复</p>
 
         <form class="contact-form" id="contactForm">
           <div class="form-group">
             <label class="form-label">公司 / 品牌名称 <span class="req">*</span></label>
             <input type="text" class="form-control" placeholder="例如：益点田有机食品" required>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="form-grid-2">
             <div class="form-group">
               <label class="form-label">联系人姓名 <span class="req">*</span></label>
               <input type="text" class="form-control" placeholder="您的姓名" required>
@@ -141,61 +158,61 @@
             <label class="form-label">留言 / 具体需求</label>
             <textarea class="form-control" placeholder="请描述您的品牌当前挑战或具体需求..."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+          <button type="submit" class="btn btn-primary btn-lg btn-full">
             📤 提交需求
           </button>
         </form>
 
         <!-- 感谢消息 -->
-        <div id="formThanks" style="display:none;background:rgba(43,94,59,0.06);border:2px solid var(--green);border-radius:16px;padding:40px;text-align:center;">
-          <div style="font-size:3rem;margin-bottom:16px;">🎉</div>
-          <h3 style="font-size:1.2rem;margin-bottom:10px;color:var(--green);">需求已提交！</h3>
-          <p style="font-size:0.92rem;color:var(--deep-light);line-height:1.7;">感谢您的信任。我们的团队将在<strong>24小时内</strong>回复您，安排免费诊断时间。</p>
-          <p style="font-size:0.85rem;color:var(--muted);margin-top:12px;">如需紧急联系，请发邮件至 <a href="mailto:hello@cookingskill.com" style="color:var(--green);font-weight:600;">hello@cookingskill.com</a></p>
+        <div id="formThanks" class="form-thanks">
+          <div class="form-thanks-icon">🎉</div>
+          <h3>需求已提交！</h3>
+          <p>感谢您的信任。我们的团队将在<strong>24小时内</strong>回复您，安排免费诊断时间。</p>
+          <p class="form-thanks-note">如需紧急联系，请发邮件至 <a href="mailto:Junefwo@126.com">Junefwo@126.com</a></p>
         </div>
       </div>
 
       <!-- 日历预约 -->
       <div>
         <p class="section-label">快速预约</p>
-        <h2 style="font-size:1.6rem;margin-bottom:8px;">预约30分钟免费诊断</h2>
-        <p style="font-size:0.9rem;color:var(--deep-light);margin-bottom:32px;">选择一个时间，与煮趣团队进行一对一深度沟通</p>
+        <h2 class="calendar-section-title">预约30分钟免费诊断</h2>
+        <p class="calendar-section-desc">选择一个时间，与煮趣团队进行一对一深度沟通</p>
 
         <!-- 日历占位 -->
-        <div style="background:var(--cream-dark);border-radius:16px;padding:24px;border:1px solid var(--border-light);margin-bottom:20px;">
-          <div style="text-align:center;">
-            <div style="font-size:4rem;margin-bottom:12px;">🗓️</div>
-            <h3 style="font-size:1.05rem;margin-bottom:8px;">在线日历预约</h3>
-            <p style="font-size:0.85rem;color:var(--deep-light);margin-bottom:20px;">点击下方按钮，选择您方便的时间段<br>（工作日 9:00 - 18:00）</p>
-            <a href="https://calendly.com" target="_blank" class="btn btn-green btn-lg" style="width:100%;justify-content:center;">
+        <div class="calendar-card">
+          <div class="calendar-card-inner">
+            <div class="calendar-icon">🗓️</div>
+            <h3 class="calendar-title">在线日历预约</h3>
+            <p class="calendar-desc">点击下方按钮，选择您方便的时间段<br>（工作日 9:00 - 18:00）</p>
+            <a href="https://calendly.com" target="_blank" class="btn btn-green btn-lg btn-full">
               📅 打开日历预约 →
             </a>
           </div>
         </div>
 
         <!-- 其他联系方式 -->
-        <div style="background:var(--cream-dark);border-radius:16px;padding:24px;border:1px solid var(--border-light);">
-          <h4 style="font-size:1rem;margin-bottom:16px;">其他联系方式</h4>
-          <div style="display:flex;flex-direction:column;gap:12px;">
-            <div style="display:flex;align-items:center;gap:12px;">
-              <div style="width:36px;height:36px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">📧</div>
+        <div class="contact-info-card">
+          <h4 class="contact-info-title">其他联系方式</h4>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-icon">📧</div>
               <div>
-                <div style="font-size:0.78rem;color:var(--muted);">邮箱</div>
-                <a href="mailto:hello@cookingskill.com" style="font-size:0.9rem;color:var(--green);font-weight:600;">hello@cookingskill.com</a>
+                <div class="contact-info-label">邮箱</div>
+                <a href="mailto:Junefwo@126.com" class="contact-info-value">Junefwo@126.com</a>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:12px;">
-              <div style="width:36px;height:36px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">💬</div>
+            <div class="contact-info-item">
+              <div class="contact-icon">💬</div>
               <div>
-                <div style="font-size:0.78rem;color:var(--muted);">微信</div>
-                <div style="font-size:0.9rem;color:var(--text);font-weight:600;">CSE_Official</div>
+                <div class="contact-info-label">微信</div>
+                <div class="contact-info-value-dark">1278175218</div>
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:12px;">
-              <div style="width:36px;height:36px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">📱</div>
+            <div class="contact-info-item">
+              <div class="contact-icon">📱</div>
               <div>
-                <div style="font-size:0.78rem;color:var(--muted);">电话</div>
-                <div style="font-size:0.9rem;color:var(--text);font-weight:600;">156-XXXX-XXXX</div>
+                <div class="contact-info-label">电话</div>
+                <div class="contact-info-value-dark">15601904829</div>
               </div>
             </div>
           </div>
@@ -207,10 +224,10 @@
 </section>
 
 <!-- FAQ -->
-<section class="section" style="background:var(--cream-dark);">
+<section class="section section-alt" data-animate="fade-up">
   <div class="container">
-    <div style="max-width:760px;margin:0 auto;">
-      <div class="section-center" style="margin-bottom:40px;">
+    <div class="faq-container">
+      <div class="section-center">
         <p class="section-label">常见问题</p>
         <h2 class="section-title">FAQ</h2>
       </div>
@@ -270,15 +287,52 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo"><div class="footer-logo-icon">趣</div><div><div style="font-weight:700;font-size:1.1rem;color:white;">煮趣</div><div style="font-size:0.7rem;color:rgba(255,255,255,0.5);"> Cooking Skill Exchange</div></div></div>
+        <div class="footer-logo">
+          <img src="../assets/images/logo-black.jpg" alt="CSE" class="footer-logo-img">
+          <div>
+            <div class="footer-logo-text-cn">煮趣</div>
+            <div class="footer-logo-text-en">Cooking Skill Exchange</div>
+          </div>
+        </div>
         <p class="footer-tagline">健康品牌的全球化增长伙伴<br>战略咨询 · AI营销增长 · GEO优化 · 出海分销</p>
-        <div class="footer-social"><a href="#">💬</a><a href="#">🐦</a><a href="#">📕</a><a href="#">💼</a><a href="#">📷</a></div>
+        <div class="footer-social">
+          <a href="#">💬</a>
+          <a href="#">🐦</a>
+          <a href="#">📕</a>
+          <a href="#">💼</a>
+          <a href="#">📷</a>
+        </div>
       </div>
-      <div class="footer-col"><h4>服务</h4><ul><li><a href="services.html">品牌战略咨询</a></li><li><a href="services.html">AI营销增长</a></li><li><a href="services.html">出海分销</a></li><li><a href="services.html">KOL联盟</a></li></ul></div>
-      <div class="footer-col"><h4>公司</h4><ul><li><a href="cases.html">成功案例</a></li><li><a href="resources.html">资源社区</a></li><li><a href="insights.html">洞见博客</a></li><li><a href="global.html">出海专页</a></li></ul></div>
-      <div class="footer-col"><h4>联系</h4><ul><li><a href="contact.html">预约咨询</a></li><li><a href="mailto:hello@cookingskill.com">hello@cookingskill.com</a></li><li><a href="#">微信：CSE_Official</a></li></ul></div>
+      <div class="footer-col">
+        <h4>服务</h4>
+        <ul>
+          <li><a href="services.html">品牌战略咨询</a></li>
+          <li><a href="services.html">AI营销增长</a></li>
+          <li><a href="services.html">出海分销</a></li>
+          <li><a href="services.html">KOL联盟</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>公司</h4>
+        <ul>
+          <li><a href="cases.html">成功案例</a></li>
+          <li><a href="resources.html">资源社区</a></li>
+          <li><a href="insights.html">洞见博客</a></li>
+          <li><a href="global.html">出海专页</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>联系</h4>
+        <ul>
+          <li><a href="contact.html">预约咨询</a></li>
+          <li><a href="mailto:Junefwo@126.com">Junefwo@126.com</a></li>
+          <li><a href="#">微信：1278175218</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-bottom"><p class="footer-copyright">© 2026 煮趣（Cooking Skill Exchange）. 沪ICP备XXXXXXXX号</p></div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2026 煮趣（Cooking Skill Exchange）. 沪ICP备XXXXXXXX号</p>
+    </div>
   </div>
 </footer>
 
