@@ -106,24 +106,31 @@
         <h2 class="form-section-title">告诉我们您的需求</h2>
         <p class="form-section-desc">我们会根据您的信息，安排最合适的人员在24小时内回复</p>
 
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Web3Forms 隐藏字段 -->
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+          <input type="hidden" name="subject" value="煮趣CSE官网 - 新的合作咨询">
+          <input type="hidden" name="from_name" value="煮趣CSE合作咨询">
+          <input type="hidden" name="replyto" value="" id="replyToField">
+          <!-- 防止垃圾邮件 -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
           <div class="form-group">
             <label class="form-label">公司 / 品牌名称 <span class="req">*</span></label>
-            <input type="text" class="form-control" placeholder="例如：益点田有机食品" required>
+            <input type="text" class="form-control" name="company" placeholder="例如：益点田有机食品" required>
           </div>
           <div class="form-grid-2">
             <div class="form-group">
               <label class="form-label">联系人姓名 <span class="req">*</span></label>
-              <input type="text" class="form-control" placeholder="您的姓名" required>
+              <input type="text" class="form-control" name="contact_name" placeholder="您的姓名" required>
             </div>
             <div class="form-group">
               <label class="form-label">邮箱 <span class="req">*</span></label>
-              <input type="email" class="form-control" placeholder="your@email.com" required>
+              <input type="email" class="form-control" name="email" id="emailField" placeholder="your@email.com" required>
             </div>
           </div>
           <div class="form-group">
             <label class="form-label">所属行业</label>
-            <select class="form-control">
+            <select class="form-control" name="industry">
               <option value="">请选择行业</option>
               <option>健康消费品</option>
               <option>功能性食品</option>
@@ -145,7 +152,7 @@
           </div>
           <div class="form-group">
             <label class="form-label">预算范围</label>
-            <select class="form-control">
+            <select class="form-control" name="budget">
               <option value="">请选择预算范围</option>
               <option>5万以下</option>
               <option>5-15万</option>
@@ -156,7 +163,7 @@
           </div>
           <div class="form-group">
             <label class="form-label">留言 / 具体需求</label>
-            <textarea class="form-control" placeholder="请描述您的品牌当前挑战或具体需求..."></textarea>
+            <textarea class="form-control" name="message" placeholder="请描述您的品牌当前挑战或具体需求..."></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-lg btn-full">
             📤 提交需求
@@ -343,21 +350,46 @@
 
 <script src="../js/main.js"></script>
 <script>
-// 联系表单特殊处理
-document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+// 联系表单提交处理
+document.getElementById('contactForm')?.addEventListener('submit', async function(e) {
   e.preventDefault();
-  const btn = this.querySelector('[type="submit"]');
-  const original = btn.textContent;
-  btn.textContent = '发送中...';
+  const form = this;
+  const btn = form.querySelector('[type="submit"]');
+  const originalHTML = btn.innerHTML;
+  btn.innerHTML = '⏳ 发送中...';
   btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = '✓ 已提交！';
-    btn.style.background = '#2B5E3B';
-    setTimeout(() => {
-      this.style.display = 'none';
-      document.getElementById('formThanks').style.display = 'block';
-    }, 1000);
-  }, 1200);
+
+  // 自动填充 replyto 为用户的邮箱
+  const emailField = document.getElementById('emailField');
+  const replyToField = document.getElementById('replyToField');
+  if (emailField && replyToField) {
+    replyToField.value = emailField.value;
+  }
+
+  try {
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData
+    });
+    const result = await response.json();
+
+    if (result.success) {
+      btn.innerHTML = '✓ 已提交！';
+      btn.style.background = '#2B5E3B';
+      setTimeout(() => {
+        form.style.display = 'none';
+        document.getElementById('formThanks').style.display = 'block';
+      }, 1000);
+    } else {
+      throw new Error(result.message || '提交失败');
+    }
+  } catch (err) {
+    btn.innerHTML = originalHTML;
+    btn.disabled = false;
+    alert('提交失败，请稍后重试。您也可以直接发送邮件至 Junefwo@126.com');
+    console.error('表单提交失败:', err);
+  }
 });
 </script>
 </body>
